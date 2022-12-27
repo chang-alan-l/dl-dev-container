@@ -1,0 +1,17 @@
+name: base
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10.*
+  - pytorch=1.13.*
+# - pytorch-cuda=11.7.* # CUDA 11.7 is handled by the image?
+  - pytorch-lightning
+  - wandb
+  - jupyterlab
+  - pandas
+  - numpy
+  - black
+  - flake8
+  - libcufile=1.4.* # Fix for https://github.com/mamba-org/mamba/issues/2167

@@ -1,0 +1,10 @@
+{
+	"build": {"dockerfile": "docker/Dockerfile"},
+
+	"customizations": {
+		"vscode": {
+			"extensions": []
+		}
+	},
+	"forwardports": [3000]
+}
