@@ -7,15 +7,23 @@ Possible other use case is to set up dev environments on remote virtual servers
 for GPU compute, rather than having to individually set up the dev environment
 each time.
 
+## With VSCode
+Requirements
+* VSCode Dev Containers
+* `nvidia-cuda-toolkit` for GPU usage
+
+## Using Jupyter
+Works with opening the parent folder with VSCode Dev Containers, following build
+and activation, jupyter works from creating a `.ipynb` file and opening with
+VSCode.
+
 # Build
 `docker build -f docker/Dockerfile .`
 
 # TODOs
-- [ ] For development, it's likely that the container itself needs git and other
-dev tools depending on the workflow.
 - [ ] Test pulling the image from the DockerHub or other repository on remote
 machine
-- [ ] Requirements are also a bit different for deployment, or direct training
-- for example the entrypoint will be the python binary, with train.py or
-infer.py as the command. Might also use `cog` for this purpose.
+- [ ] Requirements are also a bit different for deployment, or direct training (for example the entrypoint will be the python binary, with train.py or
+infer.py as the command. Might also use `cog` for this purpose.)
+- [ ] Expose correct ports for and `wandb`?
 
